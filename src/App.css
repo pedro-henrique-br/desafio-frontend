@@ -1,0 +1,31 @@
+*
+{
+  overflow-y: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.title {
+  color: #ffff;
+  font-size: 3rem;
+}
+
+.app {
+  background: rgb(210, 134, 4);
+  background: linear-gradient(
+    180deg,
+    rgba(210, 134, 4, 1) 35%,
+    rgb(255, 201, 54) 100%
+  );
+  height: 100vh;
+  width: 100%;
+}
+
+.app {
+  padding: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}

@@ -1,0 +1,71 @@
+.weather-container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.weather-container{
+  border-radius: 6px;
+  box-shadow: 6px 7px 7px hsla(35, 51%, 13%, 0.438) ;
+  background: #f0f0f0;
+  height: 350px;
+  width: 550px;
+  flex-direction: column;
+  display: flex;
+}
+
+.weather-container h1 {
+  font-size: 3rem;
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+}
+
+.temperature-container {
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+}
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.close-button-container {
+  margin-right: -50px;
+  display: flex;
+}
+
+.near-weathers-container {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  gap: 30px;
+  font-weight: 600;
+  width: 500px;
+  height: 80px;
+  border-top: solid 3px rgba(210, 135, 4, 0.527);
+}
+
+.temperature-container {
+  justify-content: space-around;
+  margin: 20px 0px 20px 50px;
+  flex-wrap: wrap;
+  width: 300px;
+  align-self: flex-start;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.temperature-container span {
+  font-weight: 600;
+}
+
