@@ -4,12 +4,18 @@ import {ArrowUpIcon} from '@primer/octicons-react'
 import {ArrowDownIcon} from '@primer/octicons-react'
 import {XIcon} from '@primer/octicons-react'
 
+<<<<<<< HEAD
 export const WeatherContainer = () => {
 
   
+=======
+export const WeatherContainer = ({getWeatherData}) => {
+>>>>>>> 8da542a (old)
   return (
   <ThemeProvider>
+    
     <BaseStyles>
+    <getWeatherData />
       <div className="weather-container">
         <div className="title-container">
         <h3>Niterói, Rj - Brasil</h3>
