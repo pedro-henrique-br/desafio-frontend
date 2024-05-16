@@ -2,35 +2,42 @@
   justify-content: center;
   align-items: center;
   display: flex;
+  background:  rgb(255, 243, 221) ;
+  color: rgba(0, 0, 0, 0.548);
 }
 
 .weather-container{
-  border-radius: 6px;
+  padding-left: 20px;
   box-shadow: 6px 7px 7px hsla(35, 51%, 13%, 0.438) ;
-  background: #f0f0f0;
-  height: 350px;
-  width: 550px;
+  height: 300px;
+  width: 500px;
   flex-direction: column;
   display: flex;
 }
 
 .weather-container h1 {
-  font-size: 3rem;
+  color: rgba(0, 0, 0, 0.74);
+  margin-top: 10px;
+  align-items: center;
+  font-size: 2.2rem;
+  font-weight: 700;
   display: flex;
-  width: 400px;
+  width: 450px;
   justify-content: space-between;
 }
 
 .temperature-container {
   display: flex;
-  width: 400px;
+  width: 450px;
   justify-content: space-between;
 }
 
 .title-container {
+  color: rgba(0, 0, 0, 0.74);
   display: flex;
   justify-content: space-between;
-  width: 400px;
+  align-items: center;
+  width: 450px;
 }
 
 button {
@@ -40,32 +47,51 @@ button {
 }
 
 .close-button-container {
-  margin-right: -50px;
   display: flex;
 }
 
 .near-weathers-container {
+  margin-right: 20px;
   align-items: center;
   justify-content: center;
   display: flex;
-  gap: 30px;
+  gap: 15px;
   font-weight: 600;
-  width: 500px;
-  height: 80px;
-  border-top: solid 3px rgba(210, 135, 4, 0.527);
+  width: 450px;
+  height: 70px;
+  border-top: solid 2px rgb(255, 162, 0);
 }
 
 .temperature-container {
-  justify-content: space-around;
-  margin: 20px 0px 20px 50px;
-  flex-wrap: wrap;
+  margin: 10px 10rem 10px 0px;
   width: 300px;
-  align-self: flex-start;
-  gap: 10px;
-  align-items: flex-end;
+  height: 100px;
+  flex-wrap: wrap;
 }
 
 .temperature-container span {
   font-weight: 600;
+  color: rgba(0, 0, 0, 0.801);
+  display: flex;
 }
 
+.temperature-container p {
+  font-size: 1.1rem;
+  width: 135px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+}
+
+
+.near-weathers-container span {
+  color:  rgb(255, 162, 0) ;
+  font-weight: 700;
+}
+
+.near-weathers-container p {
+  color: rgba(0, 0, 0, 0.726);
+  font-size: 1.2rem;
+  font-weight: 700;
+}

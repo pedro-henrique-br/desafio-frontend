@@ -5,12 +5,15 @@ import {ArrowDownIcon} from '@primer/octicons-react'
 import {XIcon} from '@primer/octicons-react'
 import { getWeatherByCity } from '../../api/Api'
 import { useState , useEffect } from 'react'
-import { WeatherInput } from './WeatherInput'
 
 export const WeatherContainer = ({value}) => {
 
   const [weatherData, setWeatherData] = useState("")
  
+  const closeWeatherContainer = () => {    
+    setWeatherData("")
+  }
+
   const weather = async (city) => {
     const data = await getWeatherByCity(city)
     setWeatherData(data)
@@ -27,6 +30,18 @@ export const WeatherContainer = ({value}) => {
 
   const forecast = weatherData.forecast
   
+  function nextFewDays(timeInString) {
+    var formatedTime = timeInString.split('-');
+    var day = parseInt(formatedTime[0], 10);
+    var month = parseInt(formatedTime[1], 10) - 1; 
+    var year = parseInt(formatedTime[2], 10);
+
+    var data = new Date(day, month, year);    
+    var daysOfTheWeek = data.getDay();
+    var daysName = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
+
+    return daysName[daysOfTheWeek];
+}
 
   return (
   <ThemeProvider>
@@ -36,21 +51,21 @@ export const WeatherContainer = ({value}) => {
         <div className="title-container">
         <h3>{location.name}, {location.region} - {location.country}</h3>
         <div className="close-button-container">
-        <button>
-          <XIcon size={35} fill='rgb(210, 134, 4)'/>  
+        <button onClick={closeWeatherContainer}>
+          <XIcon size={25} fill='rgb(210, 134, 4)'/>  
         </button>
         </div>
         </div>
         <h1>{current.temp_c}°C {current.condition.text}</h1>
         <div className="temperature-container">
           <p>
-            <ArrowDownIcon size={30} fill='rgb(210, 134, 4)'/>
+            <ArrowDownIcon size={20} fill='rgb(210, 134, 4)'/>
           <span>
             {forecast.forecastday[0].day.mintemp_c}°
           </span>
-            <ArrowUpIcon size={30} fill='rgb(210, 134, 4)' />
+            <ArrowUpIcon size={20} fill='rgb(210, 134, 4)' />
           <span>
-          {forecast.forecastday[0].day.maxtemp_c}°°
+          {forecast.forecastday[0].day.maxtemp_c}°
           </span>
           </p>
             <p>Sensação <span>{current.feelslike_c}°C</span></p>
@@ -59,28 +74,27 @@ export const WeatherContainer = ({value}) => {
         </div>
         <div className="near-weathers-container">
           <div className="day-1">
-            <p>Terça</p>
-            <p>18°29°</p>
+            <p>{nextFewDays(forecast.forecastday[0].date).split('-feira')}</p>
+            <p><span>{(forecast.forecastday[0].day.mintemp_c).toFixed()}° {(forecast.forecastday[0].day.maxtemp_c).toFixed()}°</span></p>
           </div>
           <div className="day-2">
-            <p>Terça</p>
-            <p>18°29°</p>
+            <p>{nextFewDays(forecast.forecastday[1].date).split('-feira')}</p>
+            <p><span>{(forecast.forecastday[1].day.mintemp_c).toFixed()}° {(forecast.forecastday[1].day.maxtemp_c).toFixed()}°</span></p>
           </div>
           <div className="day-3">
-            <p>Terça</p>
-            <p>18°29°</p>
+            <p>{nextFewDays(forecast.forecastday[2].date).split('-feira')}</p>
+            <p><span>{(forecast.forecastday[2].day.mintemp_c).toFixed()}° {(forecast.forecastday[2].day.maxtemp_c).toFixed()}°</span></p>
           </div>
           <div className="day-4">
-            <p>Terça</p>
-            <p>18°29°</p>
+            <p>{nextFewDays(forecast.forecastday[3].date).split('-feira')}</p>
+            <p><span>{(forecast.forecastday[3].day.mintemp_c).toFixed()}° {(forecast.forecastday[3].day.maxtemp_c).toFixed()}°</span></p>
           </div>
           <div className="day-5">
-            <p>Terça</p>
-            <p>18°29°</p>
+            <p>{nextFewDays(forecast.forecastday[4].date).split('-feira')}</p>
+            <p><span>{(forecast.forecastday[4].day.mintemp_c).toFixed()}° {(forecast.forecastday[4].day.maxtemp_c).toFixed()}°</span></p>
           </div>
         </div>
       </div>) : null}
-      <WeatherInput onInputChange={value} />
       </BaseStyles>
   </ThemeProvider>
   )

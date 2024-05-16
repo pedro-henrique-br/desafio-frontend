@@ -7,24 +7,24 @@
 }
 
 .title {
+  margin-bottom: 1rem;
   color: #ffff;
   font-size: 3rem;
 }
 
 .app {
-  background: rgb(210, 134, 4);
+  background: rgb(250, 158, 0);
   background: linear-gradient(
     180deg,
-    rgba(210, 134, 4, 1) 35%,
-    rgb(255, 201, 54) 100%
+    rgb(218, 131, 1) 35%,
+    rgb(229, 255, 0) 100%
   );
   height: 100vh;
   width: 100%;
 }
 
 .app {
-  padding: 1rem;
-  justify-content: flex-start;
+  text-align: center;
   align-items: center;
   flex-direction: column;
   display: flex;
