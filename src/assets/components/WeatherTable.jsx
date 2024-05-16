@@ -1,17 +1,22 @@
 import './WeatherTable.css'
 import { getWeatherByCapital } from '../../api/Api'
+import { useEffect, useState } from 'react'
 
 export const WeatherTable = () => {
-  
-  const city = "são paulo"
 
-  const weather = async (city) => {
-    const data = await getWeatherByCapital(city)
-    console.log(data.location.name)
+  const [capital, setCapital] = useState("")
+  
+  const city = "São Paulo"
+
+  const weather = async (...cities) => {
+    const data = await getWeatherByCapital(cities)
+    setCapital(data)
     return data
   }
-
-  weather(city)
+  
+  useEffect(() => {
+    weather(city)
+  },[])
 
 
   return (
