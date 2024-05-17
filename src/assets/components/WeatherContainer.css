@@ -19,7 +19,7 @@
   color: rgba(0, 0, 0, 0.74);
   margin-top: 10px;
   align-items: center;
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 700;
   display: flex;
   width: 450px;
@@ -38,7 +38,9 @@
   justify-content: space-between;
   align-items: center;
   width: 450px;
+  font-size: 0.9rem;
 }
+
 
 button {
   border: none;
@@ -95,3 +97,4 @@ button {
   font-size: 1.2rem;
   font-weight: 700;
 }
+

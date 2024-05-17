@@ -20,7 +20,7 @@ export const WeatherInput = ({onInputChange}) => {
         <form action="submit">
           <label className='wrapper'>
           <div className='icon'>
-            <button onClick={handleSubmit}><BiSearchAlt size={26}></BiSearchAlt></button>
+            <button onClick={city ? (handleSubmit) : ((e) => e.preventDefault())}><BiSearchAlt size={26}></BiSearchAlt></button>
           </div>
           <input
             value={city}

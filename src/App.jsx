@@ -17,7 +17,7 @@ function App() {
     <ThemeProvider>
     <BaseStyles>
       <div className='app'>
-        <h1 className='title'>Previsão do tempo</h1>
+        <h1 id='title'>Previsão do tempo</h1>
       {displayValue ? (<WeatherContainer value={displayValue}/>) : (null)}
       <WeatherInput onInputChange={handleInputChange}/>
       <WeatherTable />

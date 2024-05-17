@@ -11,5 +11,8 @@ export const apiWeather = axios.create({
 export const getWeatherByCity = (city) => 
     apiWeather.get(`${city}&days=5&aqi=no&alerts=no`).then((response) => response.data)
 
-export const getWeatherByCapital = (...capital) => 
-    apiWeather.get(`${capital}&days=1`).then((response) => response.data)
+export const getWeatherByCapital = async(capitalList) => {
+    const weatherDataPromise = capitalList.map((capital) => apiWeather.get(`${capital}&days=1`).then((response) => response.data))
+    const data = await Promise.all(weatherDataPromise)
+    return data
+}
