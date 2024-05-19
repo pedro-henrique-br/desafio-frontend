@@ -2,7 +2,7 @@ import axios from 'axios'
 
 const TOKEN_API = "f9aef99e8fe645c5b5c203352241305"
 
-const url = `http://api.weatherapi.com/v1/forecast.json?key=${TOKEN_API}&lang=pt&q=`
+const url = `https://api.weatherapi.com/v1/forecast.json?key=${TOKEN_API}&lang=pt&q=`
 
 export const apiWeather = axios.create({
     baseURL: url,
