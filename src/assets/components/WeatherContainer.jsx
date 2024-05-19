@@ -129,7 +129,7 @@ export const WeatherContainer = ({ value }) => {
                   </span>
                 </p>
               </div>
-              <div className="day-5">
+              <div id="display-none-weather" className="day-5">
                 <p>
                   {nextFewDays(forecast.forecastday[4].date).split("-feira")}
                 </p>

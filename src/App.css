@@ -1,9 +1,9 @@
-*
-{
-  overflow-y: hidden;
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 #title {
@@ -21,92 +21,283 @@
   );
   height: 100vh;
   width: 100%;
-}
-
-.app {
-  padding: 0 0 2rem 0;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  flex-direction: column;
   display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-@media screen and (max-width: 768px) {
-  .weather-container {
-      height: 300px;
-  }
+
+@media screen and (max-width: 1312px) {
+  
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 992px) {
+  
+}
+
+@media screen and (max-width: 688px) {
+  
+  }
+
+@media screen and (max-width: 380px) {
+  .app {
+    align-items: normal;
+  }
   .weather-container {
-      height: 350px;
-      width: 100vw;
+    height: 200px;
+    width: 100%;
   }
-  input {
-    margin-bottom: 5px;
-    height: 40px;
-    padding-left: 10px;
-    font-size: 1.2rem;
-    width: 90vw;
-  }
-  .app #title {
-    height: 40px;
-    margin: 5px 0px 10px 0px;
-    font-size: 1.5rem;
-  }
+
   #min-max {
     display: none;
   }
   .container {
-    display: flex;
-    height: 300px;
     align-items: flex-start;
-    flex-direction: column;
     flex-wrap: nowrap;
-    gap: 5px;
   }
-  .title h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    display: flex;
-  }
+ 
   .weather-table {
-    margin-top: 20px;
     width: 100vw;
-    height: 570px;
   }
-  .weather-container {
-    padding-bottom: 7.5rem;
+
+  .temperature-container {
+    margin: 0;
+  }
+
+  .near-weathers-container {
+    text-align: center;
+    gap: 8px;
+    justify-content: center;
   }
 
   .weather-container h1 {
+    width: 100vw;
+    margin-right: 10px;
+    font-size: 1.4rem;
+  }
+
+  .title-container h3 {
+    margin-left: 40px;
+    font-size: 0.8rem;
+  }
+
+  .title-container {
+    width: 110%;
+    padding: 0px;
+    font-size: 0.8rem;
+    justify-content: space-between;
+  }
+
+  input {
+    margin-bottom: 5px;
+    padding-left: 10px;
+    font-size: 1rem;
     width: 90vw;
   }
-  .temperature-container{
+  .app #title {
+    margin: 5px 0px 5px 70px;
+    font-size: 1.5rem;
+  }
+  .app p {
+    font-size: 0.9rem;
+  }
+  .app span {
+    font-size: 0.9rem;
+  }
+  .container {
+    gap: 5px;
+  }
+  .title h1 {
+    padding: 10px 0 5px 0px;
+    font-size: 1.5rem;
     display: flex;
-    width: 25rem;
-    margin: 0;
+  }
+  .weather-table {
+    padding-left: 10rem;
+  }
+  .title {
+    height: 40px;
+  }
+  .temperature-container {
+    width: 18rem;
     height: 60px;
     justify-content: flex-start;
   }
 
   .temperature-container p {
     font-size: 1rem;
-    width: 134px;
-    display: flex;
-    gap: 5px;
     justify-content: flex-start;
   }
 
-  
-
-  .title-container{
-    width: 90vw;
+  .near-weathers-container p {
+    font-size: 1rem;
   }
 
-  .near-weathers-container p{
-    font-size: 1rem;
+  .near-weathers-container {
+    height: 70px;
+  }
+
+  .near-weathers-container #display-none-weather {
+    display: none;
+  }
+ 
+  form {
+    padding: 10px 0px 10px 0px;
+  }
+  .container {
+    gap: 5px; 
+    height: 300px;
+  }
+  .container p{
+    font-size: 0.8rem;
+  }
+  .container span {
+    font-size: 0.8rem;
+  }
+  .container ul {
+    gap: 5px;
+    height: 150px;
+  }
+
+  input {
+    height: 30px;
+  }
+  .icon {
+    height: 30px;
+    padding-right: 10px;
   }
 }
 
+
+@media screen and (max-width: 300px) {
+  .app {
+    align-items: normal;
+  }
+  
+  .weather-container {
+    height: 230px;
+    width: 100%;
+  }
+
+  #min-max {
+    display: none;
+  }
+  .container {
+    align-items: flex-start;
+    flex-wrap: nowrap;
+  }
+ 
+  .weather-table {
+    width: 100vw;
+  }
+
+  .temperature-container {
+    margin: 0;
+  }
+
+  .near-weathers-container {
+    text-align: center;
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .weather-container h1 {
+    width: 100vw;
+    margin-right: 60px;
+    font-size: 1.4rem;
+  }
+
+  .title-container h3 {
+    margin-left: 20px;
+    font-size: 0.8rem;
+  }
+
+  .title-container {
+    
+    width: 120%;
+    padding: 0px;
+    font-size: 0.8rem;
+    justify-content: space-between;
+  }
+ 
+  input {
+    margin-bottom: 5px;
+    padding-left: 10px;
+    font-size: 1rem;
+    width: 90vw;
+  }
+  .app #title {
+    margin: 5px 0px 5px 50px;
+    font-size: 1.5rem;
+  }
+  .app p {
+    font-size: 0.9rem;
+  }
+  .app span {
+    font-size: 0.9rem;
+  }
+  .container {
+    gap: 5px;
+  }
+  .title h1 {
+    padding: 10px 0 5px 0px;
+    font-size: 1.5rem;
+    display: flex;
+  }
+  .weather-table {
+    padding-left: 10rem;
+  }
+  .title {
+    height: 40px;
+  }
+  .temperature-container {
+    width: 18rem;
+    height: 60px;
+    justify-content: flex-start;
+  }
+
+  .temperature-container p {
+    font-size: 1rem;
+    justify-content: flex-start;
+  }
+
+  .near-weathers-container p {
+    font-size: 1rem;
+  }
+
+  .near-weathers-container {
+    height: 60px;
+    margin-bottom: 30px;
+  }
+
+  .near-weathers-container #display-none-weather {
+    display: none;
+  }
+ 
+  form {
+    padding: 10px 0px 10px 0px;
+  }
+  .container {
+    gap: 0;
+    height: 250px;
+  }
+  .container p{
+    font-size: 0.8rem;
+  }
+  .container span {
+    font-size: 0.8rem;
+  }
+  .container ul {
+    gap: 0px;
+    height: 100px;
+  }
+
+  input {
+    height: 30px;
+  }
+  .icon {
+    height: 30px;
+    padding-right: 10px;
+  }
+}

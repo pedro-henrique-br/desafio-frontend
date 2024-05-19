@@ -28,7 +28,7 @@ input {
   border: none;
   width: 550px;
   height: 60px;
-  box-shadow: 6px 7px 7px hsla(35, 51%, 13%, 0.438) ;
+  border: 1px solid rgb(255, 115, 0);
 }
 
 .wrapper {
